@@ -18,10 +18,23 @@ class MainViewController: UITabBarController {
     }
 
     private func addChildViewControllers(){
-        let home = HomeTableViewController()
-        let nav = UINavigationController(rootViewController: home)
+        addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
+        addChildViewController(MessageTableViewController(), title: "消息", imageName: "tabbar_message_center")
+        addChildViewController(DiscoverTableViewController(), title: "发现", imageName: "tabbar_discover")
+        addChildViewController(ProfileTableViewController(), title: "我", imageName: "tabbar_profile")
+            }
+    
+    private func addChildViewController(uv: UIViewController,title:String,imageName:String) {
         
-        nav.title = "home"
+        let nav = UINavigationController(rootViewController: uv)
+        self.tabBar.tintColor = UIColor.orangeColor()
+        
+        //nav.title = "home"
+        uv.title = title
+        uv.tabBarItem.image = UIImage(named: imageName)
+//        uv.tabBarItem.selectedImage = UIImage(named: imageName+"_highlighted")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+//        
+//        uv.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName :UIColor.orangeColor()],forState:UIControlState.Selected)
         addChildViewController(nav)
     }
     
