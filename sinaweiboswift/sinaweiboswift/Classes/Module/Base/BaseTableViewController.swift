@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
     
-    var loginflag:Bool = true
+    var loginflag:Bool = false
     
     override func loadView() {
         //super.loadView()
@@ -20,10 +20,8 @@ class BaseTableViewController: UITableViewController {
     }
     
     func visitormode(){
-        let v = UIView()
-        v.backgroundColor = UIColor.redColor()
-        view = v
-        //print(view)
+        view = VisitorLoginView()
+        
     }
 
     override func viewDidLoad() {

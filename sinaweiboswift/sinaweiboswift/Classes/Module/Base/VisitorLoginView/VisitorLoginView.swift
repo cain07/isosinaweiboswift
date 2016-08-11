@@ -18,4 +18,16 @@ class VisitorLoginView: UIView {
     }
     */
 
+    init() {
+       super.init(frame: CGRectZero)
+        setupUI()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupUI(){
+        backgroundColor = UIColor.redColor()
+    }
 }
