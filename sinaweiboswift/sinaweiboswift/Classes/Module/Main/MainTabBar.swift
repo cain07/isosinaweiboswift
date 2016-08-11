@@ -54,7 +54,6 @@ class MainTabBar: UITabBar {
 //                index++
                 index += index == 1 ? 2 :1
                 
-                
             }
             
             composeBtn.frame = CGRectOffset(rect, w*2, -20)
