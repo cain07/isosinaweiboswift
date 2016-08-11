@@ -12,6 +12,7 @@
 		A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A71D5B19B300555EDC /* DiscoverTableViewController.swift */; };
 		A48D93AA1D5B19C000555EDC /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A91D5B19C000555EDC /* MessageTableViewController.swift */; };
 		A48D93AC1D5B19CD00555EDC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93AB1D5B19CD00555EDC /* ProfileTableViewController.swift */; };
+		A48D93AE1D5C2C7E00555EDC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93AD1D5C2C7E00555EDC /* MainTabBar.swift */; };
 		A4A076241D5AE11F00E11801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A076231D5AE11F00E11801 /* AppDelegate.swift */; };
 		A4A0762B1D5AE11F00E11801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0762A1D5AE11F00E11801 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -22,6 +23,7 @@
 		A48D93A71D5B19B300555EDC /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		A48D93A91D5B19C000555EDC /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		A48D93AB1D5B19CD00555EDC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		A48D93AD1D5C2C7E00555EDC /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		A4A076201D5AE11F00E11801 /* sinaweiboswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sinaweiboswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A076231D5AE11F00E11801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0762A1D5AE11F00E11801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A48D93A31D5B191800555EDC /* MainViewController.swift */,
+				A48D93AD1D5C2C7E00555EDC /* MainTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				A48D93AC1D5B19CD00555EDC /* ProfileTableViewController.swift in Sources */,
 				A48D93A61D5B199F00555EDC /* HomeTableViewController.swift in Sources */,
+				A48D93AE1D5C2C7E00555EDC /* MainTabBar.swift in Sources */,
 				A4A076241D5AE11F00E11801 /* AppDelegate.swift in Sources */,
 				A48D93AA1D5B19C000555EDC /* MessageTableViewController.swift in Sources */,
 				A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */,

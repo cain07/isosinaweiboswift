@@ -12,10 +12,16 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let mainbar = MainTabBar()
+        
+        setValue(mainbar,forKey:"tabBar")
 
         addChildViewControllers()
+        
         // Do any additional setup after loading the view.
     }
+    
 
     private func addChildViewControllers(){
         addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
