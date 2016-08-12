@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {
     
     var loginflag:Bool = false
     
@@ -24,13 +24,29 @@ class BaseTableViewController: UITableViewController {
     func visitormode(){
         visitorView = VisitorLoginView()  
         view = visitorView
+        visitorView?.delegate = self
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: .Plain, target: self, action: "visitorLoginViewDidLogin")
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "visitorLoginViewDidRegister")
+        
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    
+    func visitorLoginViewDidRegister() {
+        print("rigist")
+    }
+    
+    func visitorLoginViewDidLogin() {
+        print("login")
+    }
+    
 
    
 

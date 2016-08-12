@@ -8,6 +8,14 @@
 
 import UIKit
 
+//// 访客登录视图代理
+protocol VisitorLoginViewDelegate :NSObjectProtocol {
+    /// 访客视图注册
+    func visitorLoginViewDidRegister();
+    /// 访客视图登录
+    func visitorLoginViewDidLogin();
+}
+
 class VisitorLoginView: UIView {
 
     /*
@@ -17,6 +25,16 @@ class VisitorLoginView: UIView {
         // Drawing code
     }
     */
+    
+    weak var delegate :VisitorLoginViewDelegate?
+    
+    @objc private func login(){
+        delegate?.visitorLoginViewDidLogin()
+    }
+    
+    @objc private func  rigster(){
+        delegate?.visitorLoginViewDidRegister()
+    }
     
     func setViewImageTip(imageName:String?,tip:String){
         
@@ -112,6 +130,9 @@ class VisitorLoginView: UIView {
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[imgBack]-(-30)-[rigistBtn]", options: [], metrics: nil, views: ["imgBack":imgBack,"rigistBtn":rigistBtn]))
         
         backgroundColor = UIColor(white: 0.93, alpha: 1)
+        
+        loginBtn.addTarget(self, action: "login", forControlEvents: .TouchUpInside)
+        rigistBtn.addTarget(self, action: "rigster", forControlEvents: .TouchUpInside)
         
     }
     
