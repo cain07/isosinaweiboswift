@@ -17,6 +17,29 @@ class VisitorLoginView: UIView {
         // Drawing code
     }
     */
+    
+    func setViewImageTip(imageName:String?,tip:String){
+        
+        iconView.hidden = false
+    
+        tipLabel.text = tip
+        if imageName != nil{
+            imgCircle.image = UIImage(named: imageName!)
+            iconView.hidden = true
+        }else{
+            startAnimation()
+        }
+        
+    }
+    //动画效果
+    private func startAnimation(){
+        let ani = CABasicAnimation(keyPath: "transform.rotation")
+        ani.duration = 20
+        ani.toValue = 2 * M_PI
+        ani.repeatCount = MAXFLOAT
+        ani.removedOnCompletion = false
+        imgCircle.layer.addAnimation(ani, forKey: nil)
+    }
 
     init() {
        super.init(frame: CGRectZero)
@@ -55,9 +78,10 @@ class VisitorLoginView: UIView {
         addConstraint( NSLayoutConstraint(item: tipLabel, attribute: .CenterX, relatedBy: .Equal, toItem: iconView, attribute: .CenterX, multiplier: 1.0, constant: 0))
         addConstraint( NSLayoutConstraint(item: tipLabel, attribute: .CenterY, relatedBy: .Equal, toItem: iconView, attribute: .Bottom, multiplier: 1.0, constant: 86))
         
-        
+        //文本宽
         addConstraint( NSLayoutConstraint(item: tipLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 323))
-        
+        //文本的高
+        addConstraint( NSLayoutConstraint(item: tipLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 52))
         
         //左边按钮
         addConstraint( NSLayoutConstraint(item: loginBtn, attribute: .Left, relatedBy: .Equal, toItem: tipLabel, attribute: .Left, multiplier: 1.0, constant: 0))

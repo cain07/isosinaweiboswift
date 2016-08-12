@@ -12,6 +12,8 @@ class BaseTableViewController: UITableViewController {
     
     var loginflag:Bool = false
     
+    var visitorView :VisitorLoginView?
+    
     override func loadView() {
         //super.loadView()
         
@@ -20,7 +22,8 @@ class BaseTableViewController: UITableViewController {
     }
     
     func visitormode(){
-        view = VisitorLoginView()
+        visitorView = VisitorLoginView()  
+        view = visitorView
         
     }
 
