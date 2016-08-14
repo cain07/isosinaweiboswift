@@ -8,31 +8,36 @@
 
 import UIKit
 
+import AFNetworking
+
+import SVProgressHUD
+
+
 class HomeTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        visitorView?.setViewImageTip(nil, tip: "关注一些人，回这里看看有什么惊喜");
+        visitorView?.setViewImageTip(nil, tip: "关注一些人，回这里看看有什么惊喜")
+        
+           }
+
+    
+    func domo(){
+        let afh =  AFHTTPSessionManager()
+        afh.responseSerializer.acceptableContentTypes?.insert("text/html")
+        
+        SVProgressHUD.show()
+        afh.GET("http://www.weather.com.cn/data/sk/101010100.html", parameters: nil, success: { (task, result) -> Void in
+            SVProgressHUD.dismiss()
+            print(result)
+            }) { (_, error) -> Void in
+                SVProgressHUD.showErrorWithStatus("程序出现错啊")
+                print(error)
+        }
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
+   
     
 
 }

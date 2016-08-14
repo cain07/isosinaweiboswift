@@ -39,7 +39,7 @@ class MainViewController: UITabBarController {
     private func addChildViewController(uv: UIViewController,title:String,imageName:String) {
         
         let nav = UINavigationController(rootViewController: uv)
-        self.tabBar.tintColor = UIColor.orangeColor()
+        //self.tabBar.tintColor = UIColor.orangeColor()
         
         //nav.title = "home"
         uv.title = title

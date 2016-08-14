@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0250BBFE2764E2B5CECAAFCC /* Pods_sinaweiboswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */; };
+		0444172A1D60BE3700F1D074 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044417291D60BE3700F1D074 /* OAuthViewController.swift */; };
+		0475B5E91D5E0E35004D411D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475B5E81D5E0E35004D411D /* File.swift */; };
 		A409FC0C1D5C7DE0001BA946 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */; };
 		A409FC0F1D5C9ABC001BA946 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0E1D5C9ABC001BA946 /* VisitorLoginView.swift */; };
 		A48D93A41D5B191800555EDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A31D5B191800555EDC /* MainViewController.swift */; };
@@ -20,8 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044417291D60BE3700F1D074 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		0475B5E81D5E0E35004D411D /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = sinaweiboswift/Classes/Module/File.swift; sourceTree = SOURCE_ROOT; };
+		1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sinaweiboswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		A409FC0E1D5C9ABC001BA946 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		A46BF4C8A97F1499D60AB9E0 /* Pods-sinaweiboswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sinaweiboswift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sinaweiboswift/Pods-sinaweiboswift.debug.xcconfig"; sourceTree = "<group>"; };
 		A48D93A31D5B191800555EDC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A48D93A51D5B199F00555EDC /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		A48D93A71D5B19B300555EDC /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +39,7 @@
 		A4A076231D5AE11F00E11801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0762A1D5AE11F00E11801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A0762F1D5AE11F00E11801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D045D40B8BA17884DE2DA9B0 /* Pods-sinaweiboswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sinaweiboswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sinaweiboswift/Pods-sinaweiboswift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0250BBFE2764E2B5CECAAFCC /* Pods_sinaweiboswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044417261D60BD8C00F1D074 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				044417291D60BE3700F1D074 /* OAuthViewController.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		A409FC0A1D5C7D9E001BA946 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +100,7 @@
 		A48D939B1D5B184E00555EDC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				044417261D60BD8C00F1D074 /* OAuth */,
 				A409FC0A1D5C7D9E001BA946 /* Base */,
 				A48D939C1D5B184E00555EDC /* Discover */,
 				A48D939D1D5B184E00555EDC /* Home */,
@@ -137,6 +155,7 @@
 		A48D93A11D5B184E00555EDC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0475B5E81D5E0E35004D411D /* File.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -153,6 +172,8 @@
 			children = (
 				A4A076221D5AE11F00E11801 /* sinaweiboswift */,
 				A4A076211D5AE11F00E11801 /* Products */,
+				DDAC97F1DFC12F914CB99250 /* Pods */,
+				ED169488E769F733DB621547 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +196,23 @@
 			path = sinaweiboswift;
 			sourceTree = "<group>";
 		};
+		DDAC97F1DFC12F914CB99250 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A46BF4C8A97F1499D60AB9E0 /* Pods-sinaweiboswift.debug.xcconfig */,
+				D045D40B8BA17884DE2DA9B0 /* Pods-sinaweiboswift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED169488E769F733DB621547 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4A076321D5AE11F00E11801 /* Build configuration list for PBXNativeTarget "sinaweiboswift" */;
 			buildPhases = (
+				6AE88289FDB5918BFB327B0D /* [CP] Check Pods Manifest.lock */,
 				A4A0761C1D5AE11F00E11801 /* Sources */,
 				A4A0761D1D5AE11F00E11801 /* Frameworks */,
 				A4A0761E1D5AE11F00E11801 /* Resources */,
+				B59D7A61CA821C25FCDAFEEA /* [CP] Embed Pods Frameworks */,
+				CA263087B8332CAE5F964B1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +281,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6AE88289FDB5918BFB327B0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B59D7A61CA821C25FCDAFEEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sinaweiboswift/Pods-sinaweiboswift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA263087B8332CAE5F964B1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sinaweiboswift/Pods-sinaweiboswift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4A0761C1D5AE11F00E11801 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,9 +339,11 @@
 				A409FC0C1D5C7DE0001BA946 /* BaseTableViewController.swift in Sources */,
 				A48D93AE1D5C2C7E00555EDC /* MainTabBar.swift in Sources */,
 				A4A076241D5AE11F00E11801 /* AppDelegate.swift in Sources */,
+				0475B5E91D5E0E35004D411D /* File.swift in Sources */,
 				A48D93AA1D5B19C000555EDC /* MessageTableViewController.swift in Sources */,
 				A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */,
 				A409FC0F1D5C9ABC001BA946 /* VisitorLoginView.swift in Sources */,
+				0444172A1D60BE3700F1D074 /* OAuthViewController.swift in Sources */,
 				A48D93A41D5B191800555EDC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +434,7 @@
 		};
 		A4A076331D5AE11F00E11801 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46BF4C8A97F1499D60AB9E0 /* Pods-sinaweiboswift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -356,6 +448,7 @@
 		};
 		A4A076341D5AE11F00E11801 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D045D40B8BA17884DE2DA9B0 /* Pods-sinaweiboswift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

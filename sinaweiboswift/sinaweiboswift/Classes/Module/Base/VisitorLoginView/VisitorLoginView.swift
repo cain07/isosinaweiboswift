@@ -9,9 +9,9 @@
 import UIKit
 
 //// 访客登录视图代理
-protocol VisitorLoginViewDelegate :NSObjectProtocol {
+@objc protocol VisitorLoginViewDelegate :NSObjectProtocol {
     /// 访客视图注册
-    func visitorLoginViewDidRegister();
+   optional func visitorLoginViewDidRegister();
     /// 访客视图登录
     func visitorLoginViewDidLogin();
 }
@@ -33,7 +33,7 @@ class VisitorLoginView: UIView {
     }
     
     @objc private func  rigster(){
-        delegate?.visitorLoginViewDidRegister()
+        delegate?.visitorLoginViewDidRegister!()
     }
     
     func setViewImageTip(imageName:String?,tip:String){

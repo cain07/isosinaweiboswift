@@ -30,7 +30,7 @@ class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "visitorLoginViewDidRegister")
         
-        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        //UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
 
     override func viewDidLoad() {
@@ -45,6 +45,11 @@ class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {
     
     func visitorLoginViewDidLogin() {
         print("login")
+        
+        let oauth = OAuthViewController()
+        
+        let nav = UINavigationController(rootViewController: oauth)
+        presentViewController(nav, animated: true, completion: nil)
     }
     
 

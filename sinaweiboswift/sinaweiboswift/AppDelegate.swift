@@ -22,7 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = MainViewController()
         // Override point for customization after application launch.
+        
+        setThemeColor()
         return true
+    }
+    
+    private func setThemeColor(){
+        UINavigationBar.appearance().tintColor = themeColor
+        UITabBar.appearance().tintColor = themeColor
     }
 
     func applicationWillResignActive(application: UIApplication) {
