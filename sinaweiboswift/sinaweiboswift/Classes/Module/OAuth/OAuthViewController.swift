@@ -117,9 +117,15 @@ extension OAuthViewController :UIWebViewDelegate{
         afh.POST(urlString, parameters: params, success: { (_, result) -> Void in
             print(result)
             if let resultobj = result as?  [String:AnyObject]{
-                let access_token =  resultobj["access_token"] as? String
-                let uid = resultobj["uid"] as? String
-                self.getUseInfo(access_token!, uid: uid!)
+                
+                let accout = UserAccount.init(dict: resultobj)
+                
+                self.getUseInfo(accout)
+//                print(accout)
+//                
+//                let access_token =  resultobj["access_token"] as? String
+//                let uid = resultobj["uid"] as? String
+//                self.getUseInfo(access_token!, uid: uid!)
             }
             
             }) { (_, error) -> Void in
@@ -127,14 +133,22 @@ extension OAuthViewController :UIWebViewDelegate{
         }
     }
     
-    private func getUseInfo(accesstoken:String,uid:String){
+    private func getUseInfo(accout:UserAccount){
         let url = "https://api.weibo.com/2/users/show.json"
         let afh = AFHTTPSessionManager()
-        let params = ["access_token":accesstoken,"uid":uid]
+        let params = ["access_token":accout.access_token!,"uid":accout.uid!]
         afh.responseSerializer.acceptableContentTypes?.insert("text/plain")
         
         afh.GET(url, parameters: params, success: { (_, result) -> Void in
             print(result)
+            if let resultAny = result as? [String:AnyObject]{
+             accout.avatar_large =  resultAny["avatar_large"] as? String
+             accout.name = resultAny["name"] as? String
+                print(accout)
+            }
+            
+            
+            
             }) { (_, error) -> Void in
                 print(error)
         }

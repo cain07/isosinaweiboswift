@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0250BBFE2764E2B5CECAAFCC /* Pods_sinaweiboswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */; };
 		0444172A1D60BE3700F1D074 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044417291D60BE3700F1D074 /* OAuthViewController.swift */; };
+		0444172C1D62018300F1D074 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444172B1D62018300F1D074 /* UserAccount.swift */; };
 		0475B5E91D5E0E35004D411D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475B5E81D5E0E35004D411D /* File.swift */; };
 		A409FC0C1D5C7DE0001BA946 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */; };
 		A409FC0F1D5C9ABC001BA946 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0E1D5C9ABC001BA946 /* VisitorLoginView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		044417291D60BE3700F1D074 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		0444172B1D62018300F1D074 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccount.swift; path = sinaweiboswift/Classes/Module/OAuth/UserAccount.swift; sourceTree = SOURCE_ROOT; };
 		0475B5E81D5E0E35004D411D /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = sinaweiboswift/Classes/Module/File.swift; sourceTree = SOURCE_ROOT; };
 		1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sinaweiboswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		A48D939A1D5B184E00555EDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0444172B1D62018300F1D074 /* UserAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				0475B5E91D5E0E35004D411D /* File.swift in Sources */,
 				A48D93AA1D5B19C000555EDC /* MessageTableViewController.swift in Sources */,
 				A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */,
+				0444172C1D62018300F1D074 /* UserAccount.swift in Sources */,
 				A409FC0F1D5C9ABC001BA946 /* VisitorLoginView.swift in Sources */,
 				0444172A1D60BE3700F1D074 /* OAuthViewController.swift in Sources */,
 				A48D93A41D5B191800555EDC /* MainViewController.swift in Sources */,
