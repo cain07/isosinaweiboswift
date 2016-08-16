@@ -13,9 +13,15 @@ class UserAccount: NSObject,NSCoding{
     //用于调用access_token，接口获取授权后的access token。
     var access_token: String?
     //access_token的生命周期，单位是秒数
-    var expires_in: NSTimeInterval = 0
+    var expires_in: NSTimeInterval = 0 {
+        didSet{
+            expires_date = NSDate(timeIntervalSinceNow: expires_in)
+        }
+    }
     //当前授权用户的UID
     var uid: String?
+    
+    var expires_date:NSDate?
     
     //用户头像地址 String
     var avatar_large: String?
@@ -50,7 +56,11 @@ class UserAccount: NSObject,NSCoding{
         let path =   (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last! as NSString).stringByAppendingPathComponent("account.plist")
         
        if let account =  NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? UserAccount{
+        
+        if account.expires_date?.compare(NSDate()) != NSComparisonResult.OrderedDescending {
             return account
+        }
+        
         }
         return nil
     }
@@ -61,6 +71,7 @@ class UserAccount: NSObject,NSCoding{
         uid = aDecoder.decodeObjectForKey("uid") as? String
         avatar_large = aDecoder.decodeObjectForKey("avatar_large") as? String
         name = aDecoder.decodeObjectForKey("avatar_large") as? String
+        expires_date = aDecoder.decodeObjectForKey("expires_date") as? NSDate
         
     }
     
@@ -70,7 +81,7 @@ class UserAccount: NSObject,NSCoding{
         aCoder.encodeObject(uid, forKey: "uid")
         aCoder.encodeObject(avatar_large, forKey: "avatar_large")
         aCoder.encodeObject(name, forKey: "name")
-        
+        aCoder.encodeObject(expires_date, forKey: "expires_date")
     }
     
 }

@@ -10,9 +10,10 @@
 		0250BBFE2764E2B5CECAAFCC /* Pods_sinaweiboswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */; };
 		0444172A1D60BE3700F1D074 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044417291D60BE3700F1D074 /* OAuthViewController.swift */; };
 		0444172C1D62018300F1D074 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444172B1D62018300F1D074 /* UserAccount.swift */; };
-		0475B5E91D5E0E35004D411D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475B5E81D5E0E35004D411D /* File.swift */; };
+		0475B5E91D5E0E35004D411D /* Comman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475B5E81D5E0E35004D411D /* Comman.swift */; };
 		A409FC0C1D5C7DE0001BA946 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */; };
 		A409FC0F1D5C9ABC001BA946 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409FC0E1D5C9ABC001BA946 /* VisitorLoginView.swift */; };
+		A47967061D63224600F3620B /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47967051D63224600F3620B /* UserAccountViewModel.swift */; };
 		A48D93A41D5B191800555EDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A31D5B191800555EDC /* MainViewController.swift */; };
 		A48D93A61D5B199F00555EDC /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A51D5B199F00555EDC /* HomeTableViewController.swift */; };
 		A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D93A71D5B19B300555EDC /* DiscoverTableViewController.swift */; };
@@ -26,11 +27,12 @@
 /* Begin PBXFileReference section */
 		044417291D60BE3700F1D074 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		0444172B1D62018300F1D074 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccount.swift; path = sinaweiboswift/Classes/Module/OAuth/UserAccount.swift; sourceTree = SOURCE_ROOT; };
-		0475B5E81D5E0E35004D411D /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = sinaweiboswift/Classes/Module/File.swift; sourceTree = SOURCE_ROOT; };
+		0475B5E81D5E0E35004D411D /* Comman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comman.swift; path = sinaweiboswift/Classes/Module/Comman.swift; sourceTree = SOURCE_ROOT; };
 		1805EEB8F9AC998CB0B84BC6 /* Pods_sinaweiboswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sinaweiboswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A409FC0B1D5C7DE0001BA946 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		A409FC0E1D5C9ABC001BA946 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
 		A46BF4C8A97F1499D60AB9E0 /* Pods-sinaweiboswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sinaweiboswift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sinaweiboswift/Pods-sinaweiboswift.debug.xcconfig"; sourceTree = "<group>"; };
+		A47967051D63224600F3620B /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		A48D93A31D5B191800555EDC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A48D93A51D5B199F00555EDC /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		A48D93A71D5B19B300555EDC /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		A48D93A11D5B184E00555EDC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				0475B5E81D5E0E35004D411D /* File.swift */,
+				0475B5E81D5E0E35004D411D /* Comman.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -166,6 +168,7 @@
 		A48D93A21D5B184E00555EDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A47967051D63224600F3620B /* UserAccountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -337,12 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47967061D63224600F3620B /* UserAccountViewModel.swift in Sources */,
 				A48D93AC1D5B19CD00555EDC /* ProfileTableViewController.swift in Sources */,
 				A48D93A61D5B199F00555EDC /* HomeTableViewController.swift in Sources */,
 				A409FC0C1D5C7DE0001BA946 /* BaseTableViewController.swift in Sources */,
 				A48D93AE1D5C2C7E00555EDC /* MainTabBar.swift in Sources */,
 				A4A076241D5AE11F00E11801 /* AppDelegate.swift in Sources */,
-				0475B5E91D5E0E35004D411D /* File.swift in Sources */,
+				0475B5E91D5E0E35004D411D /* Comman.swift in Sources */,
 				A48D93AA1D5B19C000555EDC /* MessageTableViewController.swift in Sources */,
 				A48D93A81D5B19B300555EDC /* DiscoverTableViewController.swift in Sources */,
 				0444172C1D62018300F1D074 /* UserAccount.swift in Sources */,
