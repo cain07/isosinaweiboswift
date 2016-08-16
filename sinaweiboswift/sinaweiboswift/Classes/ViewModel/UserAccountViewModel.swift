@@ -11,8 +11,25 @@ import SVProgressHUD
 import AFNetworking
 
 class UserAccountViewModel: NSObject {
+    
+    
+    var account :UserAccount?
+    
+    var loginFlag:Bool{
+        return account?.access_token != nil
+    }
+    
+    override init() {
+        account = UserAccount.loadAccount()
+    }
+    
+    var token:String?{
+        return account?.access_token
+    }
+    
+    
 
-    private func getAccessToken(code:String){
+    func getAccessToken(code:String,finished:(errer:NSError?)->()){
         
         let urlString = "https://api.weibo.com/oauth2/access_token"
         let afh = AFHTTPSessionManager()
@@ -28,7 +45,7 @@ class UserAccountViewModel: NSObject {
                 
                 let accout = UserAccount.init(dict: resultobj)
                 
-                self.getUseInfo(accout)
+                self.getUseInfo(accout,finished: finished)
             }
             
             }) { (_, error) -> Void in
@@ -36,7 +53,7 @@ class UserAccountViewModel: NSObject {
         }
     }
     
-    private func getUseInfo(accout:UserAccount){
+     func getUseInfo(accout:UserAccount,finished:(errer:NSError?)->()){
         let url = "https://api.weibo.com/2/users/show.json"
         let afh = AFHTTPSessionManager()
         let params = ["access_token":accout.access_token!,"uid":accout.uid!]
@@ -50,9 +67,11 @@ class UserAccountViewModel: NSObject {
                 print(accout)
                 
                 accout.saveAccount()
+                finished(errer: nil)
             }
             
             }) { (_, error) -> Void in
+                
                 print(error)
         }
     }

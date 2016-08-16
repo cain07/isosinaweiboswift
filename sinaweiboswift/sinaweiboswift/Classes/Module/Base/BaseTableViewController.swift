@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {
     
-    var loginflag:Bool = false
+    var loginflag:Bool = UserAccountViewModel().loginFlag
     
     //var loginflag:Bool = UserAccount.loadAccount() != nil
     

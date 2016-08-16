@@ -40,6 +40,12 @@ class OAuthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        SVProgressHUD.dismiss()
+        
+    }
+    
     func loadAuthPage(){
         let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUri)"
         let urlauth = NSURL(string:urlString)
@@ -95,7 +101,12 @@ extension OAuthViewController :UIWebViewDelegate{
         
         print(code)
         
-        getAccessToken(code)
+        //getAccessToken(code)
+        UserAccountViewModel().getAccessToken(code){(error) ->() in
+            print("come here")
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        }
         
         return false
     }
