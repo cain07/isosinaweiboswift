@@ -145,6 +145,8 @@ extension OAuthViewController :UIWebViewDelegate{
              accout.avatar_large =  resultAny["avatar_large"] as? String
              accout.name = resultAny["name"] as? String
                 print(accout)
+                
+                accout.saveAccount()
             }
             
             

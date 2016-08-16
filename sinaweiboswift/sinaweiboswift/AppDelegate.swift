@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //加载用户信息
+        let account = UserAccount.loadAccount()
+        print(account)
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         window?.makeKeyAndVisible()

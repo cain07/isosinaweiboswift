@@ -12,6 +12,8 @@ class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {
     
     var loginflag:Bool = false
     
+    //var loginflag:Bool = UserAccount.loadAccount() != nil
+    
     var visitorView :VisitorLoginView?
     
     override func loadView() {
